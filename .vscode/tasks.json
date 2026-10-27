@@ -1,0 +1,69 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Temporary QFT pytest validation",
+			"type": "shell",
+			"command": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+			"args": [
+				"-m",
+				"pytest",
+				"-q",
+				"D:\\Trishna Projects\\quantum\\qft_vs_fft\\tests\\test_qft.py"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Temporary install QFT requirements",
+			"type": "shell",
+			"command": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+			"args": [
+				"-m",
+				"pip",
+				"install",
+				"-r",
+				"D:\\Trishna Projects\\quantum\\qft_vs_fft\\requirements.txt"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Temporary QFT project tests",
+			"type": "shell",
+			"command": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+			"args": [
+				"-c",
+				"import os, pytest; os.chdir(r'D:\\Trishna Projects\\quantum\\qft_vs_fft'); raise SystemExit(pytest.main(['-q', 'tests/test_qft.py']))"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Temporary QFT notebook validation",
+			"type": "shell",
+			"command": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+			"args": [
+				"D:\\Trishna Projects\\quantum\\qft_vs_fft\\_run_notebook_validation.py"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Temporary QFT artifact cleanup",
+			"type": "shell",
+			"command": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+			"args": [
+				"-c",
+				"import pathlib, shutil; [shutil.rmtree(path, ignore_errors=True) for path in [r'D:\\Trishna Projects\\quantum\\qft_vs_fft\\.pytest_cache', r'D:\\Trishna Projects\\quantum\\qft_vs_fft\\src\\__pycache__', r'D:\\Trishna Projects\\quantum\\qft_vs_fft\\tests\\__pycache__']]; pathlib.Path(r'D:\\Trishna Projects\\quantum\\qft_vs_fft\\_run_notebook_validation.py').unlink(missing_ok=True); pathlib.Path(r'D:\\Trishna Projects\\quantum\\.vscode\\tasks.json').unlink(missing_ok=True)"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
